@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+			header {
+				background: #000;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header>
+			<h2>MySpaceShip</h2>
+		</header>
+		<p>Just testing</p>
+	</body>
+</html>
