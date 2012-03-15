@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<style>
+			/* reset from YUI 3 */
+   		    html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+		
+			header {
+				background-color: #000;
+				color: #fff;
+				padding: 10px;
+			}
+			
+			nav {
+				width: 80px;
+				float: left;
+			}
+			
+			nav a {
+				display: block;
+			}
+			
+			section {
+				display: block;
+				float: right;				
+				background-color: silver;
+				width: 100px;
+				border: 1px solid red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<header>
+			<h2>MySpaceShip</h2>
+		</header>
+		
+		<nav>
+			<a href="javascript:void(0)">
+				<img src="images/ship1.jpg"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship2.jpg"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship3.jpg"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship4.jpg"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship5.jpg"/>
+			</a>
+		</nav>
+
+		<section>
+			Testing section
+		</section>
+		
+	</body>
+</html>
