@@ -67,7 +67,7 @@
 			}
 
 			form .w10p {
-				width: 10%;
+				width: 25%;
 			}
 			
 			form .w25p {
@@ -184,7 +184,7 @@
 					</div>
 
 
-					<label for="state" class="w10p">State</label>
+					<label for="state" class="w1p">State</label>
 					
 					<div class="w25p fixedlabelwidth1">
 						<select id="state">

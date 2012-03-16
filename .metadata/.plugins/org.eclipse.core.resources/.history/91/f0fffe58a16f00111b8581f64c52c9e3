@@ -66,10 +66,6 @@
 				min-height: 30px;
 			}
 
-			form .w10p {
-				width: 10%;
-			}
-			
 			form .w25p {
 				width: 25%;
 			}
@@ -100,6 +96,16 @@
 				width: 50%;
 			}			
 			
+			.fixedlabelwidth1 label {
+				width: 100px;
+			}
+			
+			.fixedlabelwidth1 input, .fixedlabelwidth1 select {
+				left: 100px;
+				width: 10%;
+				
+			}  
+
 			.color1 {
 				background: silver;
 			}
@@ -142,7 +148,7 @@
 		<section>
 			<article>
 				<form>
-
+					
 					<div class="w50p">
 						<label for="name">Name</label>
 						<input id="name" class="field" type="text"/>
@@ -182,11 +188,9 @@
 						<label for="city">City</label>
 						<input id="city" type="text"/>
 					</div>
-
-
-					<label for="state" class="w10p">State</label>
 					
 					<div class="w25p fixedlabelwidth1">
+						<label for="state">State</label>
 						<select id="state">
 							<option value="PI">PI</option>
 						</select>

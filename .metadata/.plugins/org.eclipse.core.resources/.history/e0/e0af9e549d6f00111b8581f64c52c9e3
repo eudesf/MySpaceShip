@@ -66,10 +66,6 @@
 				min-height: 30px;
 			}
 
-			form .w10p {
-				width: 10%;
-			}
-			
 			form .w25p {
 				width: 25%;
 			}
@@ -86,20 +82,16 @@
 				
 			}
 			
-			form input, form select {
+			form.label50p label {
+				width: 45%; /* 5% input borders */
+			}
+			
+			form input {
 				position: absolute;
 				right: 0;
 				width: 70%;
 			}
 
-			.label50p label, .label50p select {
-				width: 45%; /* ~5% input borders */
-			}
-
-			.label50p input, .label50p select {
-				width: 50%;
-			}			
-			
 			.color1 {
 				background: silver;
 			}
@@ -142,7 +134,7 @@
 		<section>
 			<article>
 				<form>
-
+					
 					<div class="w50p">
 						<label for="name">Name</label>
 						<input id="name" class="field" type="text"/>
@@ -182,27 +174,14 @@
 						<label for="city">City</label>
 						<input id="city" type="text"/>
 					</div>
-
-
-					<label for="state" class="w10p">State</label>
-					
-					<div class="w25p fixedlabelwidth1">
-						<select id="state">
-							<option value="PI">PI</option>
-						</select>
-					</div>
-					
-					<div class="w25p label50p">
-						<label for="country">Country</label>
-						<select id="country">
-							<option value="BRA">Brasil</option>
-						</select>
-					</div>
 					
 					<div class="w50p">
-						<label for="country">Other</label>
-						<input id="others" type="text"/>
+						<label for="state">State</label>
+						<select id="state">
+							<option value="value1">Text 1</option>
+						</select>
 					</div>
+					
 				</form>
 			</article>
 		</section>

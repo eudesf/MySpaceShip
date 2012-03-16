@@ -143,8 +143,9 @@
 			<article>
 				<form>
 
+					<label for="name" class="w10p">Name</label>
 					<div class="w50p">
-						<label for="name">Name</label>
+						
 						<input id="name" class="field" type="text"/>
 					</div>
 

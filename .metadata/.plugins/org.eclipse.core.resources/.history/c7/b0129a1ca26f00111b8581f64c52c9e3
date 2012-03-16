@@ -67,7 +67,7 @@
 			}
 
 			form .w10p {
-				width: 10%;
+				width: 25%;
 			}
 			
 			form .w25p {
