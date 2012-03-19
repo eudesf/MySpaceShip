@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>MySpaceShip</title>
+		
+		<style>
+			/* reset from YUI 3 */
+   		    html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+		
+			header {
+				background: #000;
+				color: #fff;
+				height: 30px
+			}
+			
+			nav {
+				float: left;
+				width: 80px;
+			}
+			
+			nav a {
+				display: block;
+				text-align: center;
+				padding-top: 10px;
+			}
+			
+			section {
+				position: absolute;
+				left: 80px;
+				right: 0px;
+				top: 30px;
+				bottom: 30px;
+			}
+			
+			article {
+				margin: 10px;
+				border: 1px solid gray;
+				padding: 10px 10px 10px 0;
+				
+				-moz-border-radius: 4px;
+				-webkit-border-radius: 4px;
+				border-radius: 4px; 
+				
+				-moz-box-shadow:    2px 2px 3px 1px #ccc;
+  				-webkit-box-shadow: 2px 2px 3px 1px #ccc;
+  				box-shadow:         2px 2px 3px 1px #ccc;
+  				
+  				height: 100%;
+			}
+			
+			form, form div {
+				letter-spacing: -5px;
+			}
+			
+			form *, form div * {
+				letter-spacing: 0;
+			}
+
+			form div {
+				display: inline-block;
+				position: relative;
+				margin-top: 5px;
+
+				border: 1px solid green;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;  
+				box-sizing: border-box; 
+			}
+
+			form label {
+				display: inline-block;
+				width: 30%;
+				padding-left: 10px;
+				vertical-align: middle;
+
+				border: 1px solid silver;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;  
+				box-sizing: border-box;       
+			}
+			
+			form input, form select {
+				border: 0;
+
+				border: 1px solid blue;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;  
+				box-sizing: border-box;       
+
+				position: relative;
+				width: 70%;
+				background: silver;
+				
+				vertical-align: middle;
+			}
+
+			form.labelw20p label {
+				width: 20%;
+			}
+			
+			section article form div label {
+				width: 30%;
+			}
+			
+			form .w10p {
+				width: 10%;
+			}
+
+			form .w20p {
+				width: 20%;
+			}
+			
+			form .w25p {
+				width: 25%;
+			}
+
+			form .w30p {
+				width: 30%;
+			}
+
+			form .w50p {
+				width: 50%;
+			}
+			
+			form .w80p {
+				width: 80%;
+			}
+
+			form .w100p {
+				width: 100%;
+			}
+			
+			.color1 {
+				background: silver;
+			}
+			.color2 {
+				background: gray;
+			}
+			.color3 {
+				background: green;
+			}
+			.color4 {
+				background: brown;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<header>
+			<h2>MySpaceShip</h2>
+		</header>
+		
+		<nav>
+			<a href="javascript:void(0)">
+				<img src="images/ship1.jpg" alt="ship 1"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship2.jpg" alt="ship 2"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship3.jpg" alt="ship 3"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship4.jpg" alt="ship 4"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship5.jpg" alt="ship 5"/>
+			</a>
+		</nav>
+
+		<section>
+			<article>
+				<form class="labelw20p">
+
+					<label for="name">Name</label>
+
+					<div class="w30p">
+						<input id="name" class="w100p" type="text" />
+					</div>
+
+					<div class="w50p">
+						<label for="address">Address</label>
+						<input id="address" type="text"/>
+					</div>
+					
+					<label for="birthdate">Data de Nasc.</label>
+					
+					<div class="w30p">
+						<input id="birthdate" type="text" class="w100p"/>
+					</div>
+					
+					<div class="w25p">
+						<label for="cep">CEP</label>
+						<input id="cep" type="text"/>
+					</div>
+					
+					<div class="w25p">
+						<label for="city">City</label>
+						<input id="city" type="text"/>
+					</div>
+
+					<label for="birthdate">Data de Nascimento</label>
+					
+					<div class="w30p">
+						<input id="birthdate" type="text" class="w100p"/>
+					</div>
+					
+					<div class="w25p">
+						<label for="cep">CEP</label>
+						<input id="cep" type="text"/>
+					</div>
+					
+					<div class="w25p">
+						<label for="city">City</label>
+						<input id="city" type="text"/>
+					</div>
+
+
+					<label for="state">State</label>
+					
+					<div class="w30p">
+						<select id="state" class="w100p">
+							<option value="PI">PI</option>
+						</select>
+					</div>
+					
+					<div class="w50p">
+						<label for="country">Country</label>
+						<select id="country">
+							<option value="BRA">Brasil</option>
+						</select>
+					</div>
+					
+					<label for="others">Other</label>
+					<div class="w80p">
+						<input id="others" type="text" class="w100p" />
+					</div>
+				</form>
+			</article>
+		</section>
+		
+	</body>
+</html>

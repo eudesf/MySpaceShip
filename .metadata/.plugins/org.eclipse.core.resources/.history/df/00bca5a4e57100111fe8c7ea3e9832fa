@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>MySpaceShip</title>
+		
+		<link rel="stylesheet" href="css/mainlayout.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/formlayout.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/jquery-ui/ui-lightness/jquery-ui-1.8.18.custom.css" type="text/css" media="screen"/>
+		
+		<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		
+		<script>
+			$(function() {
+				$("#ship1link").click(function() {
+					$.get("articles/simpleform.html", function(data) {
+						// $("section").append(data);
+						
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		
+		<header>
+			<h2>MySpaceShip</h2>
+		</header>
+		
+		<nav>
+			<a href="javascript:void(0)" id="ship1link">
+				<img src="images/ship1.jpg" alt="ship 1 - Simple Form"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship2.jpg" alt="ship 2"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship3.jpg" alt="ship 3"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship4.jpg" alt="ship 4"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship5.jpg" alt="ship 5"/>
+			</a>
+		</nav>
+
+		<section>
+			
+		</section>
+		
+	</body>
+	
+</html>

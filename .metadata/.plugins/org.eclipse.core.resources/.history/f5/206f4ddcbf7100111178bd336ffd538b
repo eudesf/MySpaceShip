@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>MySpaceShip</title>
+		
+	</head>
+	<body>
+		
+		<header>
+			<h2>MySpaceShip</h2>
+		</header>
+		
+		<nav>
+			<a href="javascript:void(0)">
+				<img src="images/ship1.jpg" alt="ship 1"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship2.jpg" alt="ship 2"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship3.jpg" alt="ship 3"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship4.jpg" alt="ship 4"/>
+			</a>
+			<a href="javascript:void(0)">
+				<img src="images/ship5.jpg" alt="ship 5"/>
+			</a>
+		</nav>
+
+		<section>
+			<article>
+				<form class="labelw20p">
+
+					<label for="name">Name</label>
+
+					<div class="w30p">
+						<input id="name" class="w100p" type="text" />
+					</div>
+
+					<div class="w50p">
+						<label for="address">Address</label>
+						<input id="address" type="text"/>
+					</div>
+					
+					<label for="birthdate">Data de Nasc.</label>
+					
+					<div class="w30p">
+						<input id="birthdate" type="text" class="w100p"/>
+					</div>
+					
+					<div class="w25p">
+						<label for="cep">CEP</label>
+						<input id="cep" type="text"/>
+					</div>
+					
+					<div class="w25p">
+						<label for="city">City</label>
+						<input id="city" type="text"/>
+					</div>
+
+					<label for="birthdate">Data de Nascimento</label>
+					
+					<div class="w30p">
+						<input id="birthdate" type="text" class="w100p"/>
+					</div>
+					
+					<div class="w25p">
+						<label for="cep">CEP</label>
+						<input id="cep" type="text"/>
+					</div>
+					
+					<div class="w25p">
+						<label for="city">City</label>
+						<input id="city" type="text"/>
+					</div>
+
+
+					<label for="state">State</label>
+					
+					<div class="w30p">
+						<select id="state" class="w100p">
+							<option value="PI">PI</option>
+						</select>
+					</div>
+					
+					<div class="w50p">
+						<label for="country">Country</label>
+						<select id="country">
+							<option value="BRA">Brasil</option>
+						</select>
+					</div>
+					
+					<label for="others">Other</label>
+					<div class="w80p">
+						<input id="others" type="text" class="w100p" />
+					</div>
+				</form>
+			</article>
+		</section>
+		
+	</body>
+</html>		

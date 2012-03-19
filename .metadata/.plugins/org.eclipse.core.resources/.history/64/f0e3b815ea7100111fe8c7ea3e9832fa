@@ -1,0 +1,16 @@
+<article>
+	<header>Other Components</header>
+
+	<form class="labelw20p">
+	
+		<label for="numericinput">Numeric</label>
+		<div class="w30p">
+			<input id="numericinput" type="text" class="w100p"/>
+		</div>
+		
+	</form>
+	
+	<script>
+		$("#numericinput").autoNumeric();
+	</script>
+</article>

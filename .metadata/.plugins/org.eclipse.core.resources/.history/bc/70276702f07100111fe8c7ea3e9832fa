@@ -1,0 +1,14 @@
+<article>
+	<header>Other Components</header>
+
+	<form class="labelw20p">
+	
+		<label for="autonumeric">Numeric</label>
+		<div class="w30p">
+			<input id="autonumeric" type="text" class="w100p"/>
+		</div>
+		<button type="button" id="button1">Testing</button>
+	</form>
+</article>
+
+<script type="text/javascript" src="articles/othercomps.js"/>

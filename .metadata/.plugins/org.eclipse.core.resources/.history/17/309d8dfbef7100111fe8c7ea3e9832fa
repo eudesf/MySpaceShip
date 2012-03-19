@@ -1,0 +1,4 @@
+$("#autonumeric").autoNumeric();
+$("#button1").click(function() {
+	alert("testing");
+});

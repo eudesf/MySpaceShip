@@ -1,0 +1,112 @@
+@media screen and (min-width: 550px) {
+
+	form, form div {
+		letter-spacing: -7px;
+	}
+	
+	form *, form div * {
+		letter-spacing: -1px;
+	}
+	
+	form div {
+		display: inline-block;
+		position: relative;
+		margin-top: 5px;
+	}
+	
+	form label {
+		display: inline-block;
+		width: 30%;
+		vertical-align: middle;
+		padding: 0 0 0 10px;
+	
+		border: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;  
+		box-sizing: border-box;       
+	}
+	
+	form input, form select {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;  
+		box-sizing: border-box;       
+	
+		position: relative;
+		width: 70%;
+		
+		vertical-align: middle;
+	}
+	
+	form img {
+		vertical-align: middle;
+	}
+	
+	
+	form.labelw20p > label {
+		width: 20%;
+	}
+	
+	form .w5p {
+		width: 5%;
+	}
+	
+	form .w10p {
+		width: 10%;
+	}
+	
+	form .w20p {
+		width: 20%;
+	}
+	
+	form .w25p {
+		width: 25%;
+	}
+	
+	form .w30p {
+		width: 30%;
+	}
+	
+	form .w40p {
+		width: 40%;
+	}
+
+	form .w50p {
+		width: 50%;
+	}
+	
+	form .w60p {
+		width: 60%;
+	}
+
+	form .w65p {
+		width: 65%;
+	}
+
+	form .w70p {
+		width: 70%;
+	}
+
+	form .w80p {
+		width: 80%;
+	}
+	
+	form .w100p {
+		width: 100%;
+	}
+	
+	/* jquery ui adjusts */
+	img.ui-datepicker-trigger {
+		width: 5%;
+		border: 1px solid silver;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	label, input {
+		display: block;
+		width: 95%;
+	}
+	article {
+		margin-left: 10px;
+	}
+}

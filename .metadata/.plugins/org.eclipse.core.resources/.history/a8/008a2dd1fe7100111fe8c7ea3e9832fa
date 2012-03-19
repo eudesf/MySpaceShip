@@ -1,0 +1,21 @@
+<article>
+	<header>Other Components</header>
+
+	<form class="labelw20p">
+	
+		<label for="autonumeric">AutoNumeric</label>
+		<div class="w30p">
+			<input class="autonumeric" id="autonumeric" type="text" class="w70p"/>
+			<button type="button" id="button1" class="w30p">Testing</button>
+		</div>
+
+		<div class="w50p">
+			<label for="datepicker">DatePicker</label>
+			<input class="datepicker w65p" id="datepicker" type="text"/>
+			<img class="ui-datepicker-trigger w5p" src="images/calendar.gif" alt="..."/>
+		</div>
+
+	</form>
+</article>
+
+<script type="text/javascript" src="js/othercomps.js"/>

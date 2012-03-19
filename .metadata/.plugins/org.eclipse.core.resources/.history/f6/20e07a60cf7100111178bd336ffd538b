@@ -1,0 +1,68 @@
+form, form div {
+	letter-spacing: -7px;
+}
+
+form *, form div * {
+	letter-spacing: -1px;
+}
+
+form div {
+	display: inline-block;
+	position: relative;
+	margin-top: 5px;
+}
+
+form label {
+	display: inline-block;
+	width: 30%;
+	vertical-align: middle;
+	padding: 0 0 0 10px;
+
+	border: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;  
+	box-sizing: border-box;       
+}
+
+form input, form select {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;  
+	box-sizing: border-box;       
+
+	position: relative;
+	width: 70%;
+	
+	vertical-align: middle;
+}
+
+form.labelw20p > label {
+	width: 20%;
+}
+
+form .w10p {
+	width: 10%;
+}
+
+form .w20p {
+	width: 20%;
+}
+
+form .w25p {
+	width: 25%;
+}
+
+form .w30p {
+	width: 30%;
+}
+
+form .w50p {
+	width: 50%;
+}
+
+form .w80p {
+	width: 80%;
+}
+
+form .w100p {
+	width: 100%;
+}
