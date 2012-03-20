@@ -1,0 +1,25 @@
+$("#button1").click(function() {
+	
+	$( "#dialog-message" ).dialog({
+		modal: true,
+		buttons: {
+			Ok: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	});
+	
+	alert($("#autonumeric").autoNumericGet());
+});
+$("#autocomplete").autocomplete({
+	source: "testdata/customdata.json",
+	minLength: 0,
+	focus: function (event, ui) {
+		$("#autocomplete").val(ui.item.label);
+		return false;
+	},
+	select: function (event, ui) {
+		$("#autocomplete").val(ui.item.label);
+		return false;
+	}
+});

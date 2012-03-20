@@ -1,0 +1,15 @@
+$("#button1").click(function() {
+	alert($("#autonumeric").autoNumericGet());
+});
+$("#autocomplete").autocomplete({
+	source: "testdata/customdata.json",
+	focus: function (event, ui) {
+		$("#autocomplete").val(ui.item.label);
+		return false;
+	},
+	select: function (event, ui) {
+		$("#autocomplete").val(ui.item.label);
+		return false;
+	}
+	
+});

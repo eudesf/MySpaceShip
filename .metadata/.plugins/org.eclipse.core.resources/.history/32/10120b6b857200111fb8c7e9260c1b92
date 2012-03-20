@@ -1,0 +1,8 @@
+$("#button1").click(function() {
+	alert($("#autonumeric").autoNumericGet());
+});
+$("#autocomplete").autocomplete({
+	source: $(this).data("source"),
+	
+	
+});

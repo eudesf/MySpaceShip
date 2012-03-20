@@ -1,0 +1,19 @@
+$("#button1").click(function() {
+	alert($("#autonumeric").autoNumericGet());
+});
+$("#autocomplete").autocomplete({
+	source: "testdata/customdata.json",
+	focus: function (event, ui) {
+		$("#autocomplete").val(ui.item.label);
+		return false;
+	},
+	select: function (event, ui) {
+		$("#autocomplete").val(ui.item.label);
+		return false;
+	}
+}).data("autocomplete")._renderItem = function (ul, item) {
+	return $("<li></li>")
+			.data("item.autocomplete", item)
+			.append("<a>" + item.label + "<br>" + item.desc + "</a>")
+			.appendTo(ul);
+};
