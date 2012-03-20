@@ -1,0 +1,69 @@
+<article>
+	<header>Simple Form 2</header>
+
+	<form class="labelw20p">
+	
+		<label for="name">Name*</label>
+	
+		<div class="w30p">
+			<input id="name" class="w100p" type="text" />
+		</div>
+	
+		<div class="w50p">
+			<label for="address">CPF</label>
+			<input id="address" type="text"/>
+		</div>
+		
+		<label for="birthdate">Data de Nascimento</label>
+		
+		<div class="w30p">
+			<input id="birthdate" type="text" class="w100p"/>
+		</div>
+
+		<div class="w50p">
+			<label for="cep" class="w30p">CEP</label>
+			<input id="cep" type="text" class="w20p"/>
+			<label for="city" class="w30p">City</label>
+			<input id="city" type="text" class="w20p"/>
+		</div>
+	
+	
+		<label for="state">State</label>
+		
+		<div class="w30p">
+			<select id="state" class="w100p">
+				<option value="PI">PI</option>
+			</select>
+		</div>
+		
+		<div class="w50p">
+			<label for="country">Country</label>
+			<select id="country">
+				<option value="BRA">Brasil</option>
+			</select>
+		</div>
+		
+		<label for="others">Other</label>
+		<div class="w80p">
+			<input id="others" type="text" class="w100p" />
+		</div>
+		
+		<label for="birthdate">Data de Nasc.</label>
+		
+		<div class="w30p">
+			<input id="birthdate" type="text" class="w100p"/>
+		</div>
+		
+		<div class="w25p">
+			<label for="cep">CEP</label>
+			<input id="cep" type="text"/>
+		</div>
+		
+		<div class="w25p">
+			<label for="city">City</label>
+			<input id="city" type="text"/>
+		</div>
+	
+		
+	</form>
+</article>

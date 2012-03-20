@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>MySpaceShip</title>
+		
+		<link rel="stylesheet" href="css/jquery-ui/ui-lightness/jquery-ui-1.8.18.custom.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/mainlayout.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/formlayout.css" type="text/css" media="screen"/>
+		
+		<script type="text/javascript" src="js/libs/css3-mediaqueries.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-ui-1.8.18.custom.min.js"></script>
+		
+		<script>
+			$(function() {
+				$("a.load-article").click(function() {
+					$.get($(this).data("article"), function(data) {
+						$("section").html(data);
+						applyPlugins("article");
+							
+					}, "html");
+				});
+				$("a.clean-article").click(function() {
+					$("section").empty();
+				});
+				
+				function applyPlugins(container) {
+					container = $(container);
+					$(".autonumeric", container).autoNumeric();
+					$(".datepicker", container).datepicker({
+						showOn: "button",
+						buttonImage: "images/calendar.gif",
+						buttonImageOnly: true
+					});
+					$("button").button();
+				}
+				
+				$("#tabs").tabs();
+			});
+		</script>
+	</head>
+	<body>
+		
+		<header>
+			<h2>MySpaceShip</h2>
+		</header>
+		
+		<nav>
+			<a href="javascript:void(0)" class="load-article" data-article="articles/simpleform.html">
+				<img src="images/ship1.jpg" alt="ship 1 - Simple Form"/>
+			</a>
+			<a href="javascript:void(0)" class="load-article" data-article="articles/simpleform2.html">
+				<img src="images/ship2.jpg" alt="ship 2"/>
+			</a>
+			<a href="javascript:void(0)" class="load-article" data-article="articles/othercomps.html">
+				<img src="images/ship3.jpg" alt="ship 3"/>
+			</a>
+			<a href="javascript:void(0)" class="load-article" data-article="articles/testingtabs.html">
+				<img src="images/ship4.jpg" alt="ship 4"/>
+			</a>
+			<a href="javascript:void(0)" class="clean-article">
+				<img src="images/ship5.jpg" alt="ship 5"/>
+			</a>
+			<a href="javascript:void(0)" class="clean-article">
+				<img src="images/ship6.png" alt="ship 6"/>
+			</a>
+		</nav>
+
+		<section>
+			<div id="tabs">
+			</div>
+		</section>
+		
+	</body>
+	
+	<!-- post-loading plugins -->
+	<script type="text/javascript" src="js/libs/autonumeric-1.7.4.js"></script>
+	
+</html>

@@ -8,9 +8,9 @@ $("#button1").click(function() {
 			}
 		}
 	});
-	
 	// alert($("#autonumeric").autoNumericGet());
 });
+
 $("#autocomplete").autocomplete({
 	source: "testdata/customdata.json",
 	minLength: 0,
@@ -23,3 +23,4 @@ $("#autocomplete").autocomplete({
 		return false;
 	}
 });
+

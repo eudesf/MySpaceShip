@@ -20,6 +20,7 @@
 					$.get($(this).data("article"), function(data) {
 						$("section").html(data);
 						applyPlugins("article");
+							
 					}, "html");
 				});
 				$("a.clean-article").click(function() {
@@ -36,6 +37,7 @@
 					});
 					$("button").button();
 				}
+				
 			});
 		</script>
 	</head>
@@ -55,7 +57,7 @@
 			<a href="javascript:void(0)" class="load-article" data-article="articles/othercomps.html">
 				<img src="images/ship3.jpg" alt="ship 3"/>
 			</a>
-			<a href="javascript:void(0)">
+			<a href="javascript:void(0)" class="load-article" data-article="articles/testingtabs.html">
 				<img src="images/ship4.jpg" alt="ship 4"/>
 			</a>
 			<a href="javascript:void(0)" class="clean-article">
@@ -64,11 +66,13 @@
 		</nav>
 
 		<section>
-			
+			<div id="tabs">
+			</div>
 		</section>
 		
 	</body>
 	
 	<!-- post-loading plugins -->
 	<script type="text/javascript" src="js/libs/autonumeric-1.7.4.js"></script>
+	
 </html>
