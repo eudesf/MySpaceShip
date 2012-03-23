@@ -8,35 +8,55 @@
 		
 		<link rel="stylesheet" href="css/jquery-ui/ui-lightness/jquery-ui-1.8.18.custom.css" type="text/css" media="screen"/>
 		<link rel="stylesheet" href="css/mainlayouttabs.css" type="text/css" media="screen"/>
-		<link rel="stylesheet" href="css/formlayout.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/formlayouttabs.css" type="text/css" media="screen"/>
 		
 		<script type="text/javascript" src="js/libs/css3-mediaqueries.js"></script>
 		<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
 		<script type="text/javascript" src="js/libs/jquery-ui-1.8.18.custom.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.jqote2.js"></script>
 		
 		<script>
 			$(function() {
-				$("a.load-article").click(function() {
+ 				$("a.load-article").click(function() {
 					$("#tabs").tabs("add", $(this).data("article"), "New Tab");
+					$("#tabs").tabs("select", $(".ui-tabs-nav li", $("#tabs").tabs("widget")).index());
 				});
-				$("a.clean-article").click(function() {
-					$("section").empty();
-				});
-				
+
 				function applyPlugins(container) {
 					container = $(container);
 					$(".autonumeric", container).autoNumeric();
-					$(".datepicker", container).datepicker({
-						showOn: "button",
-						buttonImage: "images/calendar.gif",
-						buttonImageOnly: true
-					});
 					$("button").button();
 				}
 				
-				$("#tabs").tabs({ 
-					ajaxOptions: {dataType: "html"},
+				function applyTemplates(container) {
+					$("div.template", container).each(function() {
+						var data = $(this).html();
+						if (data != null && data.length > 0) {
+							data = $.parseJSON(data);
+						}
+						var templatedef = $("script[data-template='" + $(this).data("template") + "']");
+						$(this).jqotesub(templatedef.html(), data);
+//						eval( $("script[type='text/futurejs']", templateDef).html() );
+					});
+				}
 				
+				$("#tabs").tabs({
+					cache: true,
+					ajaxOptions: {dataType: "html"},
+					select: function (event, ui) {
+						$(".ui-tabs-panel:visible [id]", $("#tabs").tabs("widget")).each(function() {
+							$(this).attr("id", "off-" + $(this).attr("id"));
+						});
+						$("[id]", ui.panel).each(function() {
+							if ($(this).attr("id").substring(0, 4) == "off-") {
+								$(this).attr("id", $(this).attr("id").substring(4));
+							}
+						});
+					},
+					load: function (event, ui) {
+						applyTemplates(ui.panel);
+						applyPlugins(ui.panel);
+					}
 				});
 			});
 		</script>
@@ -48,22 +68,22 @@
 		</header>
 		
 		<nav>
-			<a href="javascript:void(0)" class="load-article" data-article="articles/simpleform.html">
+			<a href="#" class="load-article" data-article="articles/simpleform.html">
 				<img src="images/ship1.jpg" alt="ship 1 - Simple Form"/>
 			</a>
-			<a href="javascript:void(0)" class="load-article" data-article="articles/simpleform2.html">
+			<a href="#" class="load-article" data-article="articles/simpleform2.html">
 				<img src="images/ship2.jpg" alt="ship 2"/>
 			</a>
-			<a href="javascript:void(0)" class="load-article" data-article="articles/othercomps.html">
+			<a href="#" class="load-article" data-article="articles/othercomps.html">
 				<img src="images/ship3.jpg" alt="ship 3"/>
 			</a>
-			<a href="javascript:void(0)" class="load-article" data-article="articles/testingtabs.html">
+			<a href="#" class="load-article" data-article="articles/testingtabs.html">
 				<img src="images/ship4.jpg" alt="ship 4"/>
 			</a>
-			<a href="javascript:void(0)" class="clean-article">
+			<a href="#">
 				<img src="images/ship5.jpg" alt="ship 5"/>
 			</a>
-			<a href="javascript:void(0)" id="#ship6">
+			<a href="#" id="#ship6">
 				<img src="images/ship6.png" alt="ship 6"/>
 			</a>
 		</nav>
@@ -96,7 +116,47 @@
 		
 	</body>
 	
+	<!-- templates -->
+	<script type="text/x-jqote-template" data-template="datefields">
+	<![CDATA[
+		<input id="day" type="text" class="w30p">
+		<select id="month" class="w40p">
+			<option value="" selected="selected">-</option>
+			<option value="0">Janeiro</option>
+			<option value="1">Fevereiro</option>
+			<option value="2">Março</option>
+			<option value="3">Abril</option>
+			<option value="4">Maio</option>
+			<option value="5">Junho</option>
+			<option value="6">Julho</option>
+			<option value="7">Agosto</option>
+			<option value="8">Setembro</option>
+			<option value="9">Outubro</option>
+			<option value="10">Novembro</option>
+			<option value="11">Dezembro</option>
+		</select>
+		<input id="year" type="text" class="w30p"/>
+	]]>
+	</script>
+	
+	<script type="text/x-jqote-template" data-template="dateplugin">
+	<![CDATA[
+		// Testing inclusion of javascript here		
+
+		<label for="mydatepicker">DatePicker</label>
+		<%
+		var input = $('<input id="mydatepicker" class="datepicker" type="text"/>');
+		//	$("body").append(input);
+		input.datepicker({
+			showOn: "button",
+			buttonImage: "images/calendar.gif",
+			buttonImageOnly: true
+		});
+		%>
+	]]>
+	</script>
+
 	<!-- post-loading plugins -->
 	<script type="text/javascript" src="js/libs/autonumeric-1.7.4.js"></script>
 	
-</html>
+</html>	

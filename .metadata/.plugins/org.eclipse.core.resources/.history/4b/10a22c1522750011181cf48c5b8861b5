@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>MySpaceShip</title>
+		
+		<link rel="stylesheet" href="css/jquery-ui/ui-lightness/jquery-ui-1.8.18.custom.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/mainlayouttabs.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/formlayouttabs.css" type="text/css" media="screen"/>
+		
+		<script type="text/javascript" src="js/libs/css3-mediaqueries.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-ui-1.8.18.custom.min.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.jqote2.js"></script>
+		
+		<script>
+			$(function() {
+ 				$("a.load-article").click(function() {
+					$("#tabs").tabs("add", $(this).data("article"), "New Tab");
+					$("#tabs").tabs("select", $(".ui-tabs-nav li", $("#tabs").tabs("widget")).index());
+				});
+
+				function applyPlugins(container) {
+					container = $(container);
+					$(".autonumeric", container).autoNumeric();
+					$("button").button();
+				}
+				
+				function applyTemplates(container) {
+					$("div.template", container).each(function() {
+						var data = $(this).html();
+						if (data != null && data.length > 0) {
+							data = $.parseJSON(data);
+						}
+						var templatedef = $("script[data-template='" + $(this).data("template") + "']");
+						$(this).jqotesub(templatedef.html(), data);
+//						eval( $("script[type='text/futurejs']", templateDef).html() );
+					});
+				}
+				
+				$("#tabs").tabs({
+					cache: true,
+					ajaxOptions: {dataType: "html"},
+					select: function (event, ui) {
+						$(".ui-tabs-panel:visible [id]", $("#tabs").tabs("widget")).each(function() {
+							$(this).attr("id", "off-" + $(this).attr("id"));
+						});
+						$("[id]", ui.panel).each(function() {
+							if ($(this).attr("id").substring(0, 4) == "off-") {
+								$(this).attr("id", $(this).attr("id").substring(4));
+							}
+						});
+					},
+					load: function (event, ui) {
+						applyTemplates(ui.panel);
+						applyPlugins(ui.panel);
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		
+		<header>
+			<h2>MySpaceShip</h2>
+		</header>
+		
+		<nav>
+			<a href="#" class="load-article" data-article="articles/simpleform.html">
+				<img src="images/ship1.jpg" alt="ship 1 - Simple Form"/>
+			</a>
+			<a href="#" class="load-article" data-article="articles/simpleform2.html">
+				<img src="images/ship2.jpg" alt="ship 2"/>
+			</a>
+			<a href="#" class="load-article" data-article="articles/othercomps.html">
+				<img src="images/ship3.jpg" alt="ship 3"/>
+			</a>
+			<a href="#" class="load-article" data-article="articles/testingtabs.html">
+				<img src="images/ship4.jpg" alt="ship 4"/>
+			</a>
+			<a href="#">
+				<img src="images/ship5.jpg" alt="ship 5"/>
+			</a>
+			<a href="#" id="#ship6">
+				<img src="images/ship6.png" alt="ship 6"/>
+			</a>
+		</nav>
+
+		<section>
+			<div id="tabs">
+				<ul>
+					<li><a href="#tabs-1">Nunc tincidunt</a></li>
+					<li><a href="#tabs-2">Proin dolor</a></li>
+					<li><a href="#tabs-3">Aenean lacinia</a></li>
+				</ul>
+				<div id="tabs-1">
+					<article>
+						<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+					</article>
+				</div>
+				<div id="tabs-2">
+					<article>
+						<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+					</article>
+				</div>
+				<div id="tabs-3">
+					<article>
+						<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+						<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+		
+	</body>
+	
+	<!-- templates -->
+	<script type="text/x-jqote-template" data-template="datefields">
+	<![CDATA[
+		<input id="day" type="text" class="w30p">
+		<select id="month" class="w40p">
+			<option value="" selected="selected">-</option>
+			<option value="0">Janeiro</option>
+			<option value="1">Fevereiro</option>
+			<option value="2">Março</option>
+			<option value="3">Abril</option>
+			<option value="4">Maio</option>
+			<option value="5">Junho</option>
+			<option value="6">Julho</option>
+			<option value="7">Agosto</option>
+			<option value="8">Setembro</option>
+			<option value="9">Outubro</option>
+			<option value="10">Novembro</option>
+			<option value="11">Dezembro</option>
+		</select>
+		<input id="year" type="text" class="w30p"/>
+	]]>
+	</script>
+	
+	<script type="text/x-jqote-template" data-template="dateplugin">
+	<![CDATA[
+		<label for="mydatepicker">DatePicker</label>
+		<input id="mydatepicker" class="datepicker" type="text"/>
+		<%
+		alert($("#mydatepicker").size())/
+		$("#mydatepicker").datepicker({
+			showOn: "button",
+			buttonImage: "images/calendar.gif",
+			buttonImageOnly: true
+		});
+		%>
+	]]>
+	</script>
+
+	<!-- post-loading plugins -->
+	<script type="text/javascript" src="js/libs/autonumeric-1.7.4.js"></script>
+	
+</html>	

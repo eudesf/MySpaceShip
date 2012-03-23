@@ -1,0 +1,44 @@
+<article>
+	<header>Other Components</header>
+
+	<form class="labelw20p">
+	
+		<label for="autonumeric">AutoNumeric</label>
+		<div class="w30p">
+			<input class="autonumeric w55p" id="autonumeric" type="text"/>
+			<button type="button" id="button1" class="w45p">A button element</button>
+		</div>
+		<div class="template w50p" data-usetemplate="dateplugin"></div>
+		
+		<label for="name">Name</label>
+		<input id="name" class="w30p" type="text" />
+		
+		<div class="w50p">
+			<label>Date</label>
+			<div class="template w80p" data-usetemplate="datefields"></div>
+		</div>
+		
+		<label for="autocomplete">Autocomplete</label>
+		<div class="w30p">
+			<input id="autocomplete" class="w100p" type="text" />
+		</div>
+		<div class="w50p">
+			<label for="address">Address</label>
+			<input id="address" type="text"/>
+		</div>
+
+	</form>
+	
+	<div id="dialog-message" title="Download complete" style="display: none;">
+		<p>
+			<span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+			Your files have downloaded successfully into the My Downloads folder.
+		</p>
+		<p>
+			Currently using <b>36% of your storage space</b>.
+		</p>
+	</div>
+
+</article>
+
+<script type="text/javascript" src="js/othercomps.js"/>

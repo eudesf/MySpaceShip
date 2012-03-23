@@ -1,0 +1,66 @@
+<article>
+	<header>Other Components</header>
+
+	<form class="labelw20p">
+	
+		<label for="autonumeric">AutoNumeric</label>
+		<div class="w30p">
+			<input class="autonumeric w55p" id="autonumeric" type="text"/>
+			<button type="button" id="button1" class="w45p">A button element</button>
+		</div>
+		<div class="w50p">
+			<label for="datepicker">DatePicker</label>
+			<input class="datepicker" id="datepicker" type="text"/>
+		</div>
+		
+		<label for="name">Name</label>
+		<div class="w30p">
+			<input id="name" class="w100p" type="text" />
+		</div>
+		<div class="w50p">
+			<label for="day">Date</label>
+			<input id="day" type="text" class="w20p">
+			<select id="month" class="w30p">
+				<option value="" selected="selected">-</option>
+				<option value="0">Janeiro</option>
+				<option value="1">Fevereiro</option>
+				<option value="2">Março</option>
+				<option value="3">Abril</option>
+				<option value="4">Maio</option>
+				<option value="5">Junho</option>
+				<option value="6">Julho</option>
+				<option value="7">Agosto</option>
+				<option value="8">Setembro</option>
+				<option value="9">Outubro</option>
+				<option value="10">Novembro</option>
+				<option value="11">Dezembro</option>
+			</select>
+			<input id="year" type="text" class="w20p"/>
+			
+			<input id="" type="text"/>
+		</div>
+		
+		<label for="autocomplete">Autocomplete</label>
+		<div class="w30p">
+			<input id="autocomplete" class="w100p" type="text" />
+		</div>
+		<div class="w50p">
+			<label for="address">Address</label>
+			<input id="address" type="text"/>
+		</div>
+
+	</form>
+	
+	<div id="dialog-message" title="Download complete" style="display: none;">
+		<p>
+			<span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+			Your files have downloaded successfully into the My Downloads folder.
+		</p>
+		<p>
+			Currently using <b>36% of your storage space</b>.
+		</p>
+	</div>
+
+</article>
+
+<script type="text/javascript" src="js/othercomps.js"/>
